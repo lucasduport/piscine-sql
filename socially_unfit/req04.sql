@@ -7,4 +7,4 @@ ORDER BY
     birth_date ASC,
     job_id ASC
 LIMIT 100
-OFFSET 201;
+OFFSET 224;
