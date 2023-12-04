@@ -1,3 +1,3 @@
 SELECT *
 FROM public.traffic_violations
-WHERE id = 8058 OR id = 239;
+WHERE id = 2058 OR id = 239;
