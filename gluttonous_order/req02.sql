@@ -8,4 +8,4 @@ WHERE public.scrooge_eats_accounts.company_id = public.companies.id
 AND name ILIKE 'dtf'
     ),
     now(),
-    20)
+    0)
