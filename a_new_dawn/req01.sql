@@ -26,7 +26,7 @@ CREATE TYPE nexus_food.nutriscore AS ENUM (
 
 CREATE TABLE nexus.employees
 (
-id integer,
+id serial,
 first_name varchar(25),
 last_name varchar(25),
 employee_position nexus.position,
@@ -34,7 +34,7 @@ salary numeric(10,2)
 );
 CREATE TABLE nexus_it.employees
 (
-id integer,
+id serial,
 first_name varchar(25),
 last_name varchar(25),
 employee_position nexus.position,
@@ -42,7 +42,7 @@ salary numeric(10,2)
 );
 CREATE TABLE techwave.employees
 (
-id integer,
+id serial,
 first_name varchar(25),
 last_name varchar(25),
 employee_position nexus.position,
@@ -50,7 +50,7 @@ salary numeric(10,2)
 );
 CREATE TABLE finstar.employees
 (
-id integer,
+id serial,
 first_name varchar(25),
 last_name varchar(25),
 employee_position nexus.position,
@@ -58,7 +58,7 @@ salary numeric(10,2)
 );
 CREATE TABLE nexus_food.employees
 (
-id integer,
+id serial,
 first_name varchar(25),
 last_name varchar(25),
 employee_position nexus.position,
@@ -66,7 +66,7 @@ salary numeric(10,2)
 );
 CREATE TABLE guardforce.employees
 (
-id integer,
+id serial,
 first_name varchar(25),
 last_name varchar(25),
 employee_position nexus.position,
@@ -75,7 +75,7 @@ salary numeric(10,2)
 
 CREATE TABLE nexus.nexus_relations
 (
-id integer,
+id serial,
 parent_company varchar(25),
 child_company varchar(25),
 relationship_type nexus.relationship_type
@@ -83,7 +83,7 @@ relationship_type nexus.relationship_type
 
 CREATE TABLE nexus_it.software_assets
 (
-id integer,
+id serial,
 software_name varchar(50),
 license_key uuid,
 expiration_date date
@@ -91,7 +91,7 @@ expiration_date date
 
 CREATE TABLE techwave.project_milestones
 (
-id integer,
+id serial,
 milestone_name varchar(50),
 due_date date,
 completion_status boolean
@@ -99,7 +99,7 @@ completion_status boolean
 
 CREATE TABLE finstar.investments
 (
-id integer,
+id serial,
 investment_name varchar(50),
 investment_type varchar(25),
 amount_invested numeric(15,5),
@@ -108,14 +108,14 @@ date_invested date
 
 CREATE TABLE nexus_food.products
 (
-id integer,
+id serial,
 product_name varchar(25),
 product_nutriscore nexus_food.nutriscore
 );
 
 CREATE TABLE guardforce.incident_reports
 (
-id integer,
+id serial,
 incident_description text,
 incident_date timestamp,
 incident_location varchar(50),
