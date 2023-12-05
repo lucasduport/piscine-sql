@@ -108,7 +108,7 @@ CREATE TABLE nexus_food.products
 (
 id integer,
 product_name varchar(25),
-product_score nexus_food.nutriscore
+product_nutriscore nexus_food.nutriscore
 );
 
 CREATE TABLE guardforce.incident_reports
