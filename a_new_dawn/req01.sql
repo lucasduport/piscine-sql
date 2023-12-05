@@ -17,9 +17,11 @@ CREATE TYPE nexus.relationship_type AS ENUM (
 'AFFILIATE'
 );
 CREATE TYPE nexus_food.nutriscore AS ENUM (
-'PARENT',
-'SUBSIDIARY',
-'AFFILIATE'
+'A',
+'B',
+'C',
+'D',
+'E'
 );
 
 CREATE TABLE nexus.employees
