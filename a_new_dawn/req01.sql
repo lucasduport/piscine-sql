@@ -107,7 +107,7 @@ date_invested date
 CREATE TABLE nexus_food.products
 (
 id integer,
-milestone_name varchar(25),
+product_name varchar(25),
 product_score nexus_food.nutriscore
 );
 
