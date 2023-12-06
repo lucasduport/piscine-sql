@@ -21,5 +21,3 @@ AND justice.outcomes.outcome = 'GUILTY'
 ORDER BY 
     release_date DESC,
     serving_time DESC;
-
-    SELECT * FROM release_dates;

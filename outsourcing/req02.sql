@@ -6,7 +6,7 @@ SELECT
      outcomes.created_at AS conviction_date,
      outcomes.serving_time,
      ((outcomes.created_at + interval '1 month' * outcomes.serving_time)
-        > '2059-12-03')
+        <= '2059-12-03')
     AS could_be_released
 INTO  public.outcome_status
 FROM justice.trials, justice.cases, public.people, justice.outcomes, justice.defendants
@@ -19,3 +19,4 @@ AND justice.cases.classification = 'CRIME'
 ORDER BY 
     classification,
     case_id;
+
