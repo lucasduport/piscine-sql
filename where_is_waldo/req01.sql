@@ -22,5 +22,5 @@ SELECT
     cashier_shifts.end_timestamp
 FROM nexus_stores.sales JOIN nexus_stores.cashier_shifts 
 ON sales.checkout_id = cashier_shifts.checkout_id
-WHERE end_timestamp = '2059-12-01 19:00:00'
+WHERE end_timestamp = '2059-12-01 15:00:00'
 AND sales.store_id = 78;
