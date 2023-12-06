@@ -7,4 +7,4 @@ WHERE size >
     FROM dtf.madelines_files
 )  * 0.75
 ORDER BY
-    size ASC;
+    size DESC;
