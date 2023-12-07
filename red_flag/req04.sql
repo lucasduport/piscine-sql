@@ -1,3 +1,3 @@
 UPDATE public.epix_hashtags
-SET deleted_at = '2059-12-07 10:22:22'
+SET deleted_at = DEFAULT
 WHERE name LIKE 'EndSurveillance';
