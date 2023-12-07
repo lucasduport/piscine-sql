@@ -1,7 +1,6 @@
 ALTER TABLE public.patients_records ADD person_id integer;
-ALTER TABLE public.patients_records ADD CONSTRAINT fk_zizi FOREIGN KEY (person_id)
+ALTER TABLE public.patients_records ADD FOREIGN KEY (person_id)
 REFERENCES public.people(id);
-
 
 INSERT INTO public.patients_records
 SELECT DISTINCT pi.person_id
