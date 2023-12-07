@@ -1,4 +1,5 @@
 SELECT
+    ppl.id,
     ppl.first_name,
     ppl.last_name
 FROM public.people as ppl JOIN  transport.metro_usage_logs ON metro_usage_logs.person_id = ppl.id
