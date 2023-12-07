@@ -6,5 +6,5 @@ SET description = (CASE
                         description
                 END);
 
-ALTER TABLE  migration.medical_record_entries ALTER COLUMN description TYPE varchar(100);
+ALTER TABLE migration.medical_record_entries ALTER COLUMN description TYPE varchar(100);
 
