@@ -3,7 +3,7 @@ SELECT
     size AS stored_size,
     decrypted,
         CASE
-        WHEN size IS NULL THEN CAST((SELECT avg(size) FILTER (WHERE size IS NOT NULL AND mf.decrypted = mfs.decrypted) 
+        WHEN size IS NULL THEN CAST((SELECT avg(size) FILTER (WHERE size IS NOT NULL AND mf.decrypted = mfs.decrypted AND parent_id IS NOT NULL) 
                                     FROM dtf.madelines_files_results as mf) AS bigint)
         ELSE size
         END AS calculated_size
