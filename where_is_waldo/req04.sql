@@ -1,6 +1,6 @@
 INSERT INTO nexus_stores.cashier_shifts
 VALUES
-    (10004854,
+    (15124,
     '68cdd3ec',
     NULL,
     78,
@@ -9,10 +9,8 @@ VALUES
 
 INSERT INTO nexus_stores.sales
 VALUES
-    (10448944,
-    (
-        SELECT id FROM nexus_stores.products WHERE name LIKE 'Golden Apple' LIMIT 1
-    ),
+    (15124,
+    3,
     '68cdd3ec',
     78,
     '2059-12-01 14:47:07');

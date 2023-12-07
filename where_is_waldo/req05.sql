@@ -1,6 +1,6 @@
 SELECT
-    employees.id,
-    people.id,
+    employees.id as employee_id,
+    people.id as person_id,
     people.first_name,
     people.last_name
 FROM nexus_stores.employees LEFT JOIN nexus_stores.cashier_shifts
