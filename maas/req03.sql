@@ -9,9 +9,11 @@ SELECT
     dl.battery_percentage as battery,
     dl.signal_strength
 FROM memorin.device_logs as dl 
-WHERE (SELECT da.deactivated_at
+WHERE dl.device_serial IN (SELECT da.serial_number
         FROM memorin.devices AS da
-        WHERE da.serial_number = dl.device_serial) IS NULL
+        WHERE da.deactivated_at IS NULL)
+AND dl.version_id IN (SELECT id
+        FROM memorin.device_versions)
 AND dl.temperature BETWEEN 34 AND 45
 AND dl.signal_strength BETWEEN 0 AND 5
 AND dl.battery_percentage BETWEEN 0 AND 100
@@ -32,9 +34,4 @@ AND
 (SELECT gz.max_longitude
 FROM memorin.geographic_zones as gz
 WHERE gz.id = dl.zone_id)
-ORDER BY
-    device_serial,
-    version_id DESC
 WITH CHECK OPTION;
-
-
